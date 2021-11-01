@@ -13,3 +13,4 @@ phinx-workflow.php
 storage/logs/*
 src/WorkflowsRules/storage/logs/*
 docker-compose.yml
+kanvas-phinx.php

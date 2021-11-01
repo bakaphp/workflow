@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Traits;
+namespace Workflow\Traits;
 
 use Canvas\Models\Companies;
-use Kanvas\Packages\WorkflowsRules\Jobs\RulesJob;
-use Kanvas\Packages\WorkflowsRules\Models\Rules;
-use Kanvas\Packages\WorkflowsRules\Models\RulesTypes;
+use Workflow\Jobs\RulesJob;
+use Workflow\Models\Rules;
+use Workflow\Models\RulesTypes;
 use Phalcon\Di;
 
 trait CanUseRules

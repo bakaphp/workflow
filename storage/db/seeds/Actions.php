@@ -18,19 +18,19 @@ class Actions extends AbstractSeed
             ->insert([
                 [
                     'name' => 'SendToZoho',
-                    'model_name' => 'Kanvas\Packages\WorkflowsRules\Actions\SendToZoho'
+                    'model_name' => 'Workflow\Actions\SendToZoho'
                 ],
                 [
                     'name' => 'SendMail',
-                    'model_name' => 'Kanvas\Packages\WorkflowsRules\Actions\SendMail'
+                    'model_name' => 'Workflow\Actions\SendMail'
                 ],
                 [
                     'name' => 'ADF',
-                    'model_name' => 'Kanvas\Packages\WorkflowsRules\Actions\ADF'
+                    'model_name' => 'Workflow\Actions\ADF'
                 ],
                 [
                     'name' => 'PDF',
-                    'model_name' => 'Kanvas\Packages\WorkflowsRules\Actions\PDF'
+                    'model_name' => 'Workflow\Actions\PDF'
                 ]
             ])
             ->saveData();

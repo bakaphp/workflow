@@ -6,10 +6,10 @@
 
 use Kanvas\Packages\Social\Providers\QueueProvider;
 use Kanvas\Packages\Social\Providers\RedisProvider;
-use  Kanvas\Packages\WorkflowsRules\Providers\DatabaseProvider as WorkflowDatabaseProvider;
-use  Kanvas\Packages\WorkflowsRules\Providers\LoggerProvider as WorkflowLoggerProvider;
-use  Kanvas\Packages\WorkflowsRules\Providers\MailProvider as WorkflowMailProvider;
-use  Kanvas\Packages\WorkflowsRules\Providers\TemplateProvider as WorkflowTemplateProvider;
+use  Workflow\Providers\DatabaseProvider as WorkflowDatabaseProvider;
+use  Workflow\Providers\LoggerProvider as WorkflowLoggerProvider;
+use  Workflow\Providers\MailProvider as WorkflowMailProvider;
+use  Workflow\Providers\TemplateProvider as WorkflowTemplateProvider;
 
 return [
     QueueProvider::class,

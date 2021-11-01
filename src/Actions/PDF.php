@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Actions;
+namespace Workflow\Actions;
 
 use Canvas\Filesystem\Helper;
 use Canvas\Template;
 use Kanvas\Packages\Social\Models\Messages;
-use Kanvas\Packages\WorkflowsRules\Actions;
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Actions;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
 use mikehaertl\wkhtmlto\Pdf as PDFLibrary;
 use Phalcon\Di;
 use Throwable;

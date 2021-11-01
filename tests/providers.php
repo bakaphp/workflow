@@ -13,22 +13,14 @@ use Canvas\Providers\ModelsMetadataProvider;
 use Canvas\Providers\RegistryProvider;
 use Canvas\Providers\UserProvider;
 use Canvas\Providers\ViewProvider;
-use Kanvas\Packages\Payments\Providers\PlaidProvider;
-use Kanvas\Packages\Social\Providers\DatabaseProvider as SocialDatabaseProvider;
-use Kanvas\Packages\Social\Providers\QueueProvider;
-use Kanvas\Packages\Social\Providers\RedisProvider;
-use Kanvas\Packages\Test\Support\Providers\ConfigProvider;
-use Kanvas\Packages\WorkflowsRules\Providers\DatabaseProvider as WorkflowDatabaseProvider;
+use Workflow\Providers\DatabaseProvider as WorkflowDatabaseProvider;
+use Workflow\Tests\Support\Providers\ConfigProvider;
+use Canvas\Providers\QueueProvider;
 
 return [
-    ConfigProvider::class,
     KanvasDatabaseProvider::class,
-    SocialDatabaseProvider::class,
     ModelsMetadataProvider::class,
     RegistryProvider::class,
-    QueueProvider::class,
-    RedisProvider::class,
-    PlaidProvider::class,
     AppProvider::class,
     UserProvider::class,
     WorkflowDatabaseProvider::class,
@@ -36,4 +28,6 @@ return [
     ModelsCacheProvider::class,
     MapperProvider::class,
     ViewProvider::class,
+    ConfigProvider::class,
+    QueueProvider::class
 ];

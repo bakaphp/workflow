@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules;
+namespace Workflow;
 
 use Baka\Contracts\Database\ModelInterface;
 use Canvas\Models\SystemModules;
-use Kanvas\Packages\WorkflowsRules\Contracts\ActionInterfaces;
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
-use Kanvas\Packages\WorkflowsRules\Models\Rules;
+use Workflow\Contracts\ActionInterfaces;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Models\Rules;
 
 abstract class Actions implements ActionInterfaces
 {

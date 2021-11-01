@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Jobs;
+namespace Workflow\Jobs;
 
 use Baka\Jobs\Job;
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
-use Kanvas\Packages\WorkflowsRules\Models\Rules;
-use Kanvas\Packages\WorkflowsRules\Rules as RulesServices;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Models\Rules;
+use Workflow\Rules as RulesServices;
 
 class RulesJob extends Job
 {

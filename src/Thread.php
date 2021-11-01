@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules;
+namespace Workflow;
 
 use function Baka\isJson;
-use Kanvas\Packages\WorkflowsRules\Contracts\ActionInterfaces;
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
-use Kanvas\Packages\WorkflowsRules\Models\Rules;
-use Kanvas\Packages\WorkflowsRules\Models\RulesActions;
-use Kanvas\Packages\WorkflowsRules\Models\WorkflowsLogs;
-use Kanvas\Packages\WorkflowsRules\Models\WorkflowsLogsActions;
+use Workflow\Contracts\ActionInterfaces;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Models\Rules;
+use Workflow\Models\RulesActions;
+use Workflow\Models\WorkflowsLogs;
+use Workflow\Models\WorkflowsLogsActions;
 use Phalcon\Di;
 
 class Thread

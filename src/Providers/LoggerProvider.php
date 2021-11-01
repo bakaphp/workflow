@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Providers;
+namespace Workflow\Providers;
 
 use function Baka\appPath;
 use function Baka\envValue;

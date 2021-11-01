@@ -52,7 +52,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Workflow\\": "src/"
+            "Workflow\\": "src/",
+            "Workflow\\Tests\\Support\\":"tests/_support"
+
         }
     }
 }

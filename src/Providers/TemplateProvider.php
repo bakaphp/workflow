@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Providers;
+namespace Workflow\Providers;
 
-use Kanvas\Packages\WorkflowsRules\Contracts\Template;
+use Workflow\Contracts\Template;
 use Phalcon\Di\DiInterface;
 use Phalcon\Di\ServiceProviderInterface;
 

@@ -46,9 +46,9 @@ modules:
       cleanup: false
       savepoints: false
     DB:
-      dsn: 'mysql:host=%DATA_API_MYSQL_HOST%;dbname=%DATA_API_MYSQL_NAME%'
-      user: '%DATA_API_MYSQL_USER%'
-      password: '%DATA_API_MYSQL_PASS%'
+      dsn: 'mysql:host=%WORKFLOW_MYSQL_HOST%;dbname=%WORKFLOW_MYSQL_NAME%'
+      user: '%WORKFLOW_MYSQL_USER%'
+      password: '%WORKFLOW_MYSQL_PASS%'
       dump: 'tests/_data/dump.sql'
       populate: false
       cleanup: false

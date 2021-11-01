@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Models;
+namespace Workflow\Models;
 
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
-use Kanvas\Packages\WorkflowsRules\Traits\CanUseRules;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Traits\CanUseRules;
 
 class Test implements WorkflowsEntityInterfaces
 {

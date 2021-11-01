@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kanvas\Packages\WorkflowsRules\Actions;
+namespace Workflow\Actions;
 
 use Baka\Mail\Manager as BakaMail;
 use Baka\Mail\Message;
 use Canvas\Template;
-use Kanvas\Packages\WorkflowsRules\Actions;
-use Kanvas\Packages\WorkflowsRules\Contracts\WorkflowsEntityInterfaces;
+use Workflow\Actions;
+use Workflow\Contracts\WorkflowsEntityInterfaces;
 use Throwable;
 
 class SendMail extends Actions

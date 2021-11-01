@@ -49,19 +49,6 @@ class Integration extends Module
     }
 
     /**
-     * Run migration.
-     *
-     * @param array $settings
-     *
-     * @return void
-     */
-    public function _beforeSuite($settings = [])
-    {
-        Phinx::migrate();
-        Phinx::seed();
-    }
-
-    /**
      * After all is done.
      *
      * @return void
