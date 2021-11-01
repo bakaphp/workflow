@@ -1,0 +1,58 @@
+{
+    "name": "kanvas/workflows",
+    "description": "A rules packages for canvas/core apps",
+    "keywords": [
+        "canvas/core",
+        "workflows",
+        "workflow"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frederick",
+            "email": "frederickpeal@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "php": ">= 7.4",
+        "ext-phalcon": ">=4",
+        "canvas/core": "0.3.x-dev",
+        "php-amqplib/php-amqplib": "^2.9",
+        "elastic/app-search": "^7.5",
+        "aporat/store-receipt-validator": "^4.0",
+        "tomorrow-ideas/plaid-sdk-php": "^0.12.0",
+        "symfony/expression-language": "^5.1",
+        "mctekk/zohocrm": "^0.1",
+        "mikehaertl/phpwkhtmltopdf": "2.5.0",
+        "kanvas/hengen":"dev-main",
+        "recombee/php-api-client": "^3.2"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.2",
+        "codeception/module-filesystem": "^1.0",
+        "codeception/module-phalcon": "^1.0",
+        "codeception/module-phalcon4": "^1.0",
+        "codeception/module-rest": "^1.2",
+        "codeception/verify": "*",
+        "phalcon/incubator": "4.0.x-dev",
+        "phalcon/incubator-acl": "^1.0.0-alpha.1",
+        "phalcon/incubator-test": "^1.0.0-alpha.1",
+        "robmorgan/phinx": "^0.12",
+        "fzaninotto/faker": "^1.9",
+        "vlucas/phpdotenv": "^4.1",
+        "odan/phinx-migrations-generator": "^5",
+        "mark-gerarts/auto-mapper-plus": "2.0.0-alpha1",
+        "squizlabs/php_codesniffer": "3.2",
+        "symfony/var-dumper": "^4.3@dev",
+        "phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "^9.1",
+        "phalcon/ide-stubs": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Workflow\\": "src/"
+        }
+    }
+}
