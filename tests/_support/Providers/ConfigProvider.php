@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Tests\Support\Providers;
+namespace Kanvas\Workflow\Tests\Support\Providers;
 
 use function Baka\appPath;
 use Phalcon\Config;

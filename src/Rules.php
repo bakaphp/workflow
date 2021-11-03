@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Workflow;
+namespace Kanvas\Workflow;
 
 use Baka\Contracts\EventsManager\EventManagerAwareTrait;
-use Workflow\Contracts\WorkflowsEntityInterfaces;
-use Workflow\Models\Rules as RulesModel;
+use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;
+use Kanvas\Workflow\Models\Rules as RulesModel;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
 class Rules

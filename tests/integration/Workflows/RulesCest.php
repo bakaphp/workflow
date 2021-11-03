@@ -12,11 +12,11 @@ use Faker\Provider\en_US\Person;
 use Faker\Provider\en_US\PhoneNumber;
 use IntegrationTester;
 use Kanvas\Packages\Test\Support\Models\CompaniesWorkflow;
-use Workflow\Jobs\RulesJob;
-use Workflow\Models\Rules;
-use Workflow\Models\RulesTypes as ModelsRulesTypes;
-use Workflow\Models\Test;
-use Workflow\Rules as RulesServices;
+use Kanvas\Workflow\Jobs\RulesJob;
+use Kanvas\Workflow\Models\Rules;
+use Kanvas\Workflow\Models\RulesTypes as ModelsRulesTypes;
+use Kanvas\Workflow\Models\Test;
+use Kanvas\Workflow\Rules as RulesServices;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
 class RulesCest

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Providers;
+namespace Kanvas\Workflow\Providers;
 
 use function Baka\envValue;
 use Baka\Mail\Manager as BakaMail;

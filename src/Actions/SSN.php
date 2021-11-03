@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Actions;
+namespace Kanvas\Workflow\Actions;
 
 use Kanvas\Packages\Social\Contracts\Messages\MessagesInterface;
-use Workflow\Actions;
-use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Kanvas\Workflow\Actions;
+use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;
 use Throwable;
 
 class SSN extends Actions
