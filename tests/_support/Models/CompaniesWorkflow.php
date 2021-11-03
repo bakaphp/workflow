@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Kanvas\Packages\Test\Support\Models;
+namespace Kanvas\Workflow\Test\Support\Models;
 
 use Canvas\Models\Companies as KanvasCompanies;
 use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;

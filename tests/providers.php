@@ -14,7 +14,7 @@ use Canvas\Providers\RegistryProvider;
 use Canvas\Providers\UserProvider;
 use Canvas\Providers\ViewProvider;
 use Kanvas\Workflow\Providers\DatabaseProvider as WorkflowDatabaseProvider;
-use Kanvas\Workflow\Tests\Support\Providers\ConfigProvider;
+use Kanvas\Workflow\Test\Support\Providers\ConfigProvider;
 use Canvas\Providers\QueueProvider;
 
 return [
