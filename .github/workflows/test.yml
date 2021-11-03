@@ -14,38 +14,30 @@ jobs:
       DATA_API_MYSQL_HOST: 127.0.0.1
       DATA_API_MYSQL_USER: root
       DATA_API_MYSQL_PASS: password
-      DATA_API_MYSQL_NAME: kanvas_social
+      DATA_API_MYSQL_NAME: kanvas_workflow
       DATA_API_SOCIAL_MYSQL_HOST: 127.0.0.1
       DATA_API_SOCIAL_MYSQL_USER: root
       DATA_API_SOCIAL_MYSQL_PASS: password
-      DATA_API_SOCIAL_MYSQL_NAME: kanvas_social
+      DATA_API_SOCIAL_MYSQL_NAME: kanvas_workflow
       DATA_API_WALLET_MYSQL_HOST: 127.0.0.1
       DATA_API_WALLET_MYSQL_USER: root
       DATA_API_WALLET_MYSQL_PASS: password
-      DATA_API_WALLET_MYSQL_NAME: kanvas_social
+      DATA_API_WALLET_MYSQL_NAME: kanvas_workflow
       WORKFLOW_MYSQL_HOST: 127.0.0.1
-      WORKFLOW_MYSQL_NAME: kanvas_social
+      WORKFLOW_MYSQL_NAME: kanvas_workflow
       WORKFLOW_MYSQL_USER: root
       WORKFLOW_MYSQL_PASS: password
       DATA_API_MEMCACHED_HOST: 127.0.0.1
       DATA_API_MEMCACHED_PORT: 11211
       DATA_API_MEMCACHED_WEIGHT: 100
-      STRIPE_PUBLIC: ${{ secrets.STRIPE_PUBLIC }}
-      STRIPE_SECRET: ${{ secrets.STRIPE_SECRET }}
       EMAIL_USER: ${{ secrets.EMAIL_USER }}
       EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-      PLAID_CLIENT_ID: ${{ secrets.PLAID_CLIENT_ID }}
-      PLAID_CLIENT_SECRET: ${{ secrets.PLAID_CLIENT_SECRET }}
-      PLAID_PUBLIC_KEY: ${{ secrets.PLAID_PUBLIC_KEY }}
-      PLAID_ENVIRONMENT: sandbox
       REDIS_HOST: 127.0.0.1
       REDIS_PORT: 6379
       ELASTIC_HOST: 127.0.0.1:9200
       APP_IP: api.kanvas.ld
       APP_ENV: development
       PHINX_CONFIG_DIR: storage
-      ITUNES_RECEIPT_EXAMPLE: ${{ secrets.ITUNES_RECEIPT_EXAMPLE }}
-      ITUNES_STORE_PASS: ${{ secrets.ITUNES_STORE_PASS }}
       RECOMBEE_PRIVATE_TOKEN: ${{ secrets.RECOMBEE_PRIVATE_TOKEN }}
       CANVAS_PHINX_CONFIG_DIR: vendor/canvas/core/storage
     services:
@@ -132,7 +124,7 @@ jobs:
         run: composer update --prefer-dist --no-suggest
 
       - name: Setup Kanvas Env Variable
-        run: cp vendor/canvas/core/storage/ci/.env.example .env
+        run: cp storage/ci/.env.example .env
       
       - name: Setup Kanvas Phinx
         run: cp vendor/canvas/core/storage/ci/phinx.php.example kanvas-phinx.php
@@ -144,7 +136,7 @@ jobs:
         run: vendor/bin/phinx seed:run -c kanvas-phinx.php
 
       - name: Setup Env Variable
-        run: cp .env.example .env
+        run: cp storage/ci/.env.example .env
           
       - name: Setup Phinx Workflow
         run: cp storage/ci/phinx.example phinx-workflow.php
