@@ -120,16 +120,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.199.7",
+            "version": "3.199.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fda176884d2952cffc7e67209470bff49609339c"
+                "reference": "4da80879dbdbbe104137e479224874b96ec4fa36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fda176884d2952cffc7e67209470bff49609339c",
-                "reference": "fda176884d2952cffc7e67209470bff49609339c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4da80879dbdbbe104137e479224874b96ec4fa36",
+                "reference": "4da80879dbdbbe104137e479224874b96ec4fa36",
                 "shasum": ""
             },
             "require": {
@@ -202,12 +202,7 @@
                 "s3",
                 "sdk"
             ],
-            "support": {
-                "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
-                "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.199.7"
-            },
-            "time": "2021-10-29T18:25:02+00:00"
+            "time": "2021-11-03T18:15:36+00:00"
         },
         {
             "name": "baka/baka",
@@ -588,12 +583,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bakaphp/canvas-core.git",
-                "reference": "d8ee14ea688621e3cf09899db710626cecdb4788"
+                "reference": "aca216e6d30e7e7bb081d903f405d615c4196124"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bakaphp/canvas-core/zipball/d8ee14ea688621e3cf09899db710626cecdb4788",
-                "reference": "d8ee14ea688621e3cf09899db710626cecdb4788",
+                "url": "https://api.github.com/repos/bakaphp/canvas-core/zipball/aca216e6d30e7e7bb081d903f405d615c4196124",
+                "reference": "aca216e6d30e7e7bb081d903f405d615c4196124",
                 "shasum": ""
             },
             "require": {
@@ -672,7 +667,7 @@
                 }
             ],
             "description": "Kanvas Ecosystem Packages",
-            "time": "2021-10-27T17:53:36+00:00"
+            "time": "2021-11-02T02:19:15+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -2564,7 +2559,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -2610,15 +2605,11 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2021-10-22T18:01:46+00:00"
         },
         {
             "name": "illuminate/container",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -2661,15 +2652,11 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2021-09-15T14:32:50+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2709,15 +2696,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2021-10-22T18:01:46+00:00"
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -2771,15 +2754,11 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2021-10-22T13:20:42+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2817,24 +2796,20 @@
             ],
             "description": "The Illuminate Macroable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2020-10-27T15:20:30+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "f0a1ffbfd93a24758f39cc76821ce5a408e20b53"
+                "reference": "a8851b7001530d3c11626a81449ed9b63dd10db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/f0a1ffbfd93a24758f39cc76821ce5a408e20b53",
-                "reference": "f0a1ffbfd93a24758f39cc76821ce5a408e20b53",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/a8851b7001530d3c11626a81449ed9b63dd10db7",
+                "reference": "a8851b7001530d3c11626a81449ed9b63dd10db7",
                 "shasum": ""
             },
             "require": {
@@ -2885,24 +2860,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2021-10-24T14:32:18+00:00"
+            "time": "2021-10-29T13:34:03+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
-                "reference": "019c83d17b6311be5e52ab99487804d210110d9d"
+                "reference": "c10a68f37f590dc8c1c1fe5b6ad3f09381282137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/translation/zipball/019c83d17b6311be5e52ab99487804d210110d9d",
-                "reference": "019c83d17b6311be5e52ab99487804d210110d9d",
+                "url": "https://api.github.com/repos/illuminate/translation/zipball/c10a68f37f590dc8c1c1fe5b6ad3f09381282137",
+                "reference": "c10a68f37f590dc8c1c1fe5b6ad3f09381282137",
                 "shasum": ""
             },
             "require": {
@@ -2937,24 +2908,20 @@
             ],
             "description": "The Illuminate Translation package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2021-10-21T16:07:23+00:00"
+            "time": "2021-10-30T16:01:33+00:00"
         },
         {
             "name": "illuminate/validation",
-            "version": "v8.68.1",
+            "version": "v8.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "b0be37f9bfeac3ff2bbca337394c6f09564bfa80"
+                "reference": "f2426f5578af420a3cffbf07969bc96b2399f56b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/b0be37f9bfeac3ff2bbca337394c6f09564bfa80",
-                "reference": "b0be37f9bfeac3ff2bbca337394c6f09564bfa80",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/f2426f5578af420a3cffbf07969bc96b2399f56b",
+                "reference": "f2426f5578af420a3cffbf07969bc96b2399f56b",
                 "shasum": ""
             },
             "require": {
@@ -2997,11 +2964,7 @@
             ],
             "description": "The Illuminate Validation package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2021-10-26T12:04:24+00:00"
+            "time": "2021-11-01T17:23:09+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
@@ -3951,16 +3914,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.53.1",
+            "version": "2.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045"
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f4655858a784988f880c1b8c7feabbf02dfdf045",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/eed83939f1aed3eee517d03a33f5ec587ac529b5",
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5",
                 "shasum": ""
             },
             "require": {
@@ -3971,6 +3934,7 @@
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
+                "doctrine/dbal": "^2.0 || ^3.0",
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
@@ -4027,10 +3991,6 @@
                 "datetime",
                 "time"
             ],
-            "support": {
-                "issues": "https://github.com/briannesbitt/Carbon/issues",
-                "source": "https://github.com/briannesbitt/Carbon"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/Carbon",
@@ -4041,20 +4001,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-06T09:29:23+00:00"
+            "time": "2021-11-01T21:22:20+00:00"
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.0",
+            "version": "v4.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "50953a2691a922aa1769461637869a0a2faa3f53"
+                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/50953a2691a922aa1769461637869a0a2faa3f53",
-                "reference": "50953a2691a922aa1769461637869a0a2faa3f53",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/63a79e8daa781cac14e5195e63ed8ae231dd10fd",
+                "reference": "63a79e8daa781cac14e5195e63ed8ae231dd10fd",
                 "shasum": ""
             },
             "require": {
@@ -4093,11 +4053,7 @@
                 "parser",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.0"
-            },
-            "time": "2021-09-20T12:20:58+00:00"
+            "time": "2021-11-03T20:52:16+00:00"
         },
         {
             "name": "nimbly/capsule",
