@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Workflow\Models;
+namespace Kanvas\Workflow\Models;
 
 class Attributes extends BaseModel
 {

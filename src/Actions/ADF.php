@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Actions;
+namespace Kanvas\Workflow\Actions;
 
 use Kanvas\Hengen\Hengen;
 use Throwable;
-use Workflow\Actions;
-use Workflow\Contracts\WorkflowsEntityInterfaces;
+use Kanvas\Workflow\Actions;
+use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;
 
 class ADF extends Actions
 {

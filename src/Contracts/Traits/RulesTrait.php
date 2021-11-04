@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Contracts\Traits;
+namespace Kanvas\Workflow\Contracts\Traits;
 
-use Workflow\Traits\CanUseRules;
+use Kanvas\Workflow\Traits\CanUseRules;
 
 /**
  * @deprecated 0.4

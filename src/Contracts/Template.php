@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Workflow\Contracts;
+namespace Kanvas\Workflow\Contracts;
 
 class Template
 {
