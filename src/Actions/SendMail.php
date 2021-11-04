@@ -29,15 +29,6 @@ class SendMail extends Actions
     {
         $args = $entity->getRulesRelatedEntities();
 
-        if (!isset($entity->companies)) {
-            $this->setStatus(Actions::FAIL);
-            $this->setError(
-                'No company relationship or No SMTP configuration pass for the current company'
-            );
-
-            return;
-        }
-
         try {
             $params = $this->params;
             $data = $this->getModelsInArray(...$args);
