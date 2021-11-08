@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Kanvas\Workflow\Traits;
 
+use function Baka\isCLI;
 use Canvas\Models\Companies;
 use Kanvas\Workflow\Jobs\RulesJob;
 use Kanvas\Workflow\Models\Rules;
@@ -36,7 +37,7 @@ trait CanUseRules
             Di::getDefault()->get('app')
         );
 
-        if ($rules->count()) {
+        if ($rules->count() && !isCLI()) {
             foreach ($rules as $rule) {
                 RulesJob::dispatch($rule, $event, $this);
             }
