@@ -94,7 +94,8 @@ class Rules extends BaseModel
             'conditions' => 'systems_modules_id = :systems_module_id: 
                                 AND rules_types_id = :rules_types_id: 
                                 AND companies_id in (:companies_id:, :global_companies:)
-                                AND apps_id in (:global_apps_id:, :apps_id:)',
+                                AND apps_id in (:global_apps_id:, :apps_id:)
+                                AND is_deleted = 0',
             'bind' => $bind
         ]);
     }
