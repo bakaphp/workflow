@@ -13,6 +13,7 @@ use Phalcon\Di;
 trait CanUseRules
 {
     protected array $rulesRelatedEntities = [];
+    protected bool $enableWorkflows = true;
 
     /**
      * fireRules.
@@ -25,6 +26,10 @@ trait CanUseRules
      */
     public function fireRules(string $event) : void
     {
+        if ($this->enableWorkflows === false) {
+            return;
+        }
+
         $rulesTypes = RulesTypes::findFirstByName($event);
         if (!$rulesTypes) {
             return;
@@ -74,7 +79,7 @@ trait CanUseRules
      * Add rulesRelatedEntities to toArray allowing us to pass values to the queue
      * why? when serializing the object only db properties are unserialize based on toArray.
      *
-     * @param [type] $columns
+     * @param mixed $columns
      *
      * @return array
      */
@@ -84,5 +89,25 @@ trait CanUseRules
         $array['rulesRelatedEntities'] = $this->getRulesRelatedEntities();
 
         return $array;
+    }
+
+    /**
+     * Enable workflows.
+     *
+     * @return void
+     */
+    public function enableWorkflows() : void
+    {
+        $this->enableWorkflows = true;
+    }
+
+    /**
+     * Disable workflows.
+     *
+     * @return void
+     */
+    public function disableWorkflows() : void
+    {
+        $this->enableWorkflows = false;
     }
 }
