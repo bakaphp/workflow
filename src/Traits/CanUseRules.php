@@ -13,18 +13,24 @@ use Phalcon\Di;
 trait CanUseRules
 {
     protected array $rulesRelatedEntities = [];
+    protected bool $enableWorkflows = true;
 
     /**
      * fireRules.
      *
      * search rules for companies and systems_modules
      *
-     * @param  mixed $event
+     * @param mixed $event
+     * @param bool $useAsync
      *
      * @return void
      */
-    public function fireRules(string $event) : void
+    public function fireRules(string $event, bool $useAsync = true) : void
     {
+        if ($this->enableWorkflows === false) {
+            return;
+        }
+
         $rulesTypes = RulesTypes::findFirstByName($event);
         if (!$rulesTypes) {
             return;
@@ -38,7 +44,7 @@ trait CanUseRules
 
         if ($rules->count()) {
             foreach ($rules as $rule) {
-                if ($rule->isAsync()) {
+                if ($rule->isAsync() && $useAsync) {
                     RulesJob::dispatch($rule, $event, $this);
                 } else {
                     $rulesJobs = new RulesJob($rule, $event, $this);
@@ -74,7 +80,7 @@ trait CanUseRules
      * Add rulesRelatedEntities to toArray allowing us to pass values to the queue
      * why? when serializing the object only db properties are unserialize based on toArray.
      *
-     * @param [type] $columns
+     * @param mixed $columns
      *
      * @return array
      */
@@ -84,5 +90,25 @@ trait CanUseRules
         $array['rulesRelatedEntities'] = $this->getRulesRelatedEntities();
 
         return $array;
+    }
+
+    /**
+     * Enable workflows.
+     *
+     * @return void
+     */
+    public function enableWorkflows() : void
+    {
+        $this->enableWorkflows = true;
+    }
+
+    /**
+     * Disable workflows.
+     *
+     * @return void
+     */
+    public function disableWorkflows() : void
+    {
+        $this->enableWorkflows = false;
     }
 }
