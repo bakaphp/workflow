@@ -20,11 +20,12 @@ trait CanUseRules
      *
      * search rules for companies and systems_modules
      *
-     * @param  mixed $event
+     * @param mixed $event
+     * @param bool $useAsync
      *
      * @return void
      */
-    public function fireRules(string $event) : void
+    public function fireRules(string $event, bool $useAsync = true) : void
     {
         if ($this->enableWorkflows === false) {
             return;
@@ -43,7 +44,7 @@ trait CanUseRules
 
         if ($rules->count()) {
             foreach ($rules as $rule) {
-                if ($rule->isAsync()) {
+                if ($rule->isAsync() && $useAsync) {
                     RulesJob::dispatch($rule, $event, $this);
                 } else {
                     $rulesJobs = new RulesJob($rule, $event, $this);
