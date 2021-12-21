@@ -32,14 +32,11 @@ class PDF extends Actions
             $pdf = new PDFLibrary([
                 'encoding' => 'UTF-8',
                 'no-outline',
-                'margin-top' => 0,
                 'margin-right' => 0,
-                'margin-bottom' => 0,
                 'margin-left' => 0,
                 'disable-smart-shrinking',
                 'enable-local-file-access',
-                'page-width' => 200,
-                'page-height' => 265
+                'page-size' => 'A4'
             ]);
 
             $data = $this->getModelsInArray(...$args);
