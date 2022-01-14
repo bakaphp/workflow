@@ -151,6 +151,9 @@ class Thread
         if (getenv('SENTRY_PROJECT')) {
             if ($errors = $this->getErrors()) {
                 foreach ($errors as $error) {
+                    if (empty($error['error'])) {
+                        continue;
+                    }
                     Di::getDefault()->get('log')->error($error['error']);
                 }
             }
