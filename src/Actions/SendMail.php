@@ -58,7 +58,7 @@ class SendMail extends Actions
      *
      * @return Message
      */
-    private function mailService(WorkflowsEntityInterfaces $entity) : Message
+    protected function mailService(WorkflowsEntityInterfaces $entity) : Message
     {
         $company = $entity->getCompanies();
 
