@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Kanvas\Workflow;
 
 use Baka\Contracts\EventsManager\EventManagerAwareTrait;
+use Kanvas\Workflow\Contracts\ActionInterfaces;
 use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;
 use Kanvas\Workflow\Models\Rules as RulesModel;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
@@ -65,11 +66,18 @@ class Rules
             $thread->start();
 
             $actions = $this->rule->getRulesActions();
+            /**
+             * @var ActionInterfaces
+             */
+            $previousAction = null;
 
             foreach ($actions as $action) {
                 $class = $action->getActionsClass();
 
                 if (class_exists($class) && is_subclass_of($class, Actions::class)) {
+                    if ($previousAction instanceof ActionInterfaces) {
+                    }
+
                     $currentAction = new $class($this->rule, $thread);
 
                     $this->fire('workflow:beforeHandle', $currentAction);
@@ -83,6 +91,7 @@ class Rules
 
                     //fire a event ot execute after actions finished
                     $this->fire('workflow:afterHandle', $currentAction);
+                    $previousAction = $currentAction;
                 }
             }
 
