@@ -76,6 +76,9 @@ class Rules
 
                 if (class_exists($class) && is_subclass_of($class, Actions::class)) {
                     if ($previousAction instanceof ActionInterfaces) {
+                        if (!$previousAction->getStatus()) {
+                            break;
+                        }
                     }
 
                     $currentAction = new $class($this->rule, $thread);
