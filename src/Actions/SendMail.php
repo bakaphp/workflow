@@ -9,6 +9,7 @@ use Baka\Mail\Message;
 use Canvas\Template;
 use Kanvas\Workflow\Actions;
 use Kanvas\Workflow\Contracts\WorkflowsEntityInterfaces;
+use Phalcon\Di;
 use Throwable;
 
 class SendMail extends Actions
@@ -62,26 +63,31 @@ class SendMail extends Actions
     {
         $company = $entity->getCompanies();
 
-        $config = [
-            'driver' => 'smtp',
-            'host' => $company->get('EMAIL_HOST'),
-            'port' => $company->get('EMAIL_PORT'),
-            'username' => $company->get('EMAIL_USER'),
-            'password' => $company->get('EMAIL_PASS'),
-            'from' => [
-                'email' => $company->get('EMAIL_FROM_PRODUCTION'),
-                'name' => $company->get('EMAIL_FROM_NAME_PRODUCTION'),
-            ],
-            'debug' => [
+        if (!empty($company->get('EMAIL_HOST'))) {
+            $config = [
+                'driver' => 'smtp',
+                'host' => $company->get('EMAIL_HOST'),
+                'port' => $company->get('EMAIL_PORT'),
+                'username' => $company->get('EMAIL_USER'),
+                'password' => $company->get('EMAIL_PASS'),
                 'from' => [
-                    'email' => $company->get('EMAIL_FROM_DEBUG'),
-                    'name' => $company->get('EMAIL_FROM_NAME_DEBUG'),
+                    'email' => $company->get('EMAIL_FROM_PRODUCTION'),
+                    'name' => $company->get('EMAIL_FROM_NAME_PRODUCTION'),
                 ],
-            ],
-        ];
+                'debug' => [
+                    'from' => [
+                        'email' => $company->get('EMAIL_FROM_DEBUG'),
+                        'name' => $company->get('EMAIL_FROM_NAME_DEBUG'),
+                    ],
+                ],
+            ];
 
-        $mailer = new BakaMail($config);
-        return $mailer->createMessage();
+
+            $mailer = new BakaMail($config);
+            return $mailer->createMessage();
+        }
+
+        return Di::getDefault()->get('mail');
     }
 
     /**
